@@ -1,0 +1,16 @@
+from .config import CDNConfig
+
+
+class BaseCDN:
+
+    CDN_CONF: CDNConfig
+
+    def __get_token(self) -> str: ...
+
+    def folder_file_list(self, sdn_folder_name: str) -> list[str]: ...
+
+    def upload_file(self, file_name: str, file_folder_path: str, sdn_folder_name: str) -> str: ...
+
+    def download_file(self, file_name: str, file_folder_path: str, sdn_folder_name: str) -> None: ...
+
+    def remove_file(self, file_name, sdn_folder_name) -> None: ...

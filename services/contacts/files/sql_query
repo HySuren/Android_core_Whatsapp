@@ -1,0 +1,4 @@
+#!/bin/bash
+# "SQL_Query" "PATH_DB"
+
+su - root -c "echo \"$1\"|/data/local/sqlite3 $2"

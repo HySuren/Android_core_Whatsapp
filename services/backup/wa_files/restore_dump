@@ -1,0 +1,11 @@
+#!/bin/bash
+# Restore dump
+
+
+owner=`stat -c "%U" /data/data/com.whatsapp/`
+group=`stat -c "%G" /data/data/com.whatsapp/`
+
+pm clear com.whatsapp
+
+cp -R /data/local/tmp/$1/* /data/data/com.whatsapp/;
+chown -R $owner:$group /data/data/com.whatsapp/*;

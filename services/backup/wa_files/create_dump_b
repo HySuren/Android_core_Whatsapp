@@ -1,0 +1,7 @@
+#!/bin/bash
+# Dump whatsapp
+
+cp -R /data/data/com.whatsapp.w4b/ /data/local/tmp/$1;
+chmod 777 /data/local/tmp/$1/;
+chown -R shell:shell /data/local/tmp/$1
+
